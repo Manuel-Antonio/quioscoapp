@@ -21,7 +21,7 @@ const router = useRouter();
         </nav>
         <button 
         type="button"
-        className="text-white bg-zinc-800 py-3 w-1/2 mt-5 shadow-md rounded-md"
+        className="text-white uppercase font-bold bg-zinc-800 py-3  w-1/2 mt-5 shadow-md rounded-md"
         onClick={() => {
           router.push("/admin")
         }}

@@ -34,7 +34,7 @@ const AdminLayout = ({ children, pagina }) => {
           <div className="flex flex-col w-full items-center mt-10">
             <button
               type="button"
-              className="text-white font-bold uppercase transition-all hover:bg-indigo-800 bg-indigo-600 py-3 w-1/2 mt-5 shadow-md rounded-md"
+              className="text-white uppercase font-bold transition-all hover:bg-indigo-800 bg-indigo-600 py-3 px-6 w-1/2 mt-5 shadow-md rounded-md"
               onClick={() => {
                 router.push("/");
               }}

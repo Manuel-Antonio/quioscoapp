@@ -7,11 +7,11 @@ import useQuiosco from "@/hooks/useQuiosco";
 
 const Producto = ({producto}) => {
     const {handleSetProducto, handleSetModal, pedido} = useQuiosco();
-    const {imagen, nombre, precio, id} = producto;
+    const {imagen, nombre, precio} = producto;
     const [edicion, setEdicion] = useState(false);
 
     useEffect(() => {
-        if (pedido.some((pedidoState) => pedidoState.id === id)) {
+        if (pedido.some((pedidoState) => pedidoState.id === producto.id)) {
           setEdicion(true)
         }
       }, [pedido]);

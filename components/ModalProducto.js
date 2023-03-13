@@ -7,14 +7,14 @@ import { formatearDinero } from "@/helpers";
 
 const ModalProducto = () => {
   const { producto, handleSetModal, handleSetPedido, pedido} = useQuiosco();
-  const { id, nombre, precio, imagen } = producto;
+  const { nombre, precio, imagen } = producto;
   const [cantidad, setCantidad] = useState(1);
   const [edicion, setEdicion] = useState(false);
 
   useEffect(() => {
-    if (pedido.some((pedidoState) => pedidoState.id === id)) {
+    if (pedido.some((pedidoState) => pedidoState.id === producto.id)) {
       const productoPedido = pedido.find(
-        (pedidoState) => pedidoState.id === id
+        (pedidoState) => pedidoState.id === producto.id
       );
       setCantidad(productoPedido.cantidad);
       setEdicion(true)
